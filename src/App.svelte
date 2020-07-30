@@ -1,13 +1,16 @@
 <script lang="ts">
 	export let name: string;
+	import Main from "./partials/main.svelte";
 </script>
 
-<main class="flex mx-auto max-w-5xl items-center justify-center min-h-screen">
-	<h1 class="text-red-400 font-bold text-5xl">{name}</h1>
-</main>
+<Main {name}/>
 
 <style global>
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
 </style>
+
+<svelte:head>
+<link rel="stylesheet" href="/fonts/inter.css" />
+</svelte:head>
