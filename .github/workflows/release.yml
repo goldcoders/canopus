@@ -1,9 +1,8 @@
-name: "publish"
+name: "tag-release"
 on:
   push:
-    branches:
-      - release
-
+    tags:
+      - "v*.*.*"
 jobs:
   publish-tauri:
     strategy:
@@ -13,6 +12,9 @@ jobs:
 
     runs-on: ${{ matrix.platform }}
     steps:
+      - uses: actions/checkout@v1
+      - name: Set env
+        run: echo ::set-env name=RELEASE_VERSION::${GITHUB_REF#refs/*/}
       - uses: actions/checkout@v2
       - name: setup node
         uses: actions/setup-node@v1
@@ -31,14 +33,12 @@ jobs:
           sudo apt-get install -y webkit2gtk-4.0
       - name: install app dependencies and build it
         run: yarn && yarn build
-      - name: get version
-        run: echo ::set-env name=PACKAGE_VERSION::$(node -p "require('./package.json').version")
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: app-v${{ env.PACKAGE_VERSION }}
-          releaseName: "Canopus v${{ env.PACKAGE_VERSION }}"
+          tagName: ${{ env.RELEASE_VERSION }}
+          releaseName: "Canopus - ${{ env.RELEASE_VERSION }}"
           body: "See the assets to download this version and install."
           draft: true
           prerelease: false
