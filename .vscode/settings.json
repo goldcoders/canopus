@@ -42,7 +42,7 @@
         "statusBar.foreground": "#434C5E"
     },
     "workbench.colorTheme": "Popping and Locking",
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": true,
     "workbench.iconTheme": "vscode-icons",
     // Exclude Vendor Folders During Search and Replace
     "files.watcherExclude": {
