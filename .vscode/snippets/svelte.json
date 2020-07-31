@@ -1,0 +1,20 @@
+{
+    "Create New Component": {
+        "prefix": "new",
+        "body": [
+            "<script>\n$1</script>\n",
+            "<style>\n$2</style>\n",
+            "//Add Your HTML Below"
+        ],
+        "description": "Log output to console"
+    },
+    "Mounted": {
+        "prefix": "mount",
+        "body": [
+            "onMount(async () => {\n",
+            "\t$1",
+            "});"
+        ],
+        "description": "On Mounted Life Cycle Hook"
+    }
+}

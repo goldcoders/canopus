@@ -1,5 +1,5 @@
 <script lang="ts">
-export let message: string;
+export let successMessage: string;
 </script>
 <div class="fixed inset-x-0 bottom-0">
   <div class="bg-indigo-600">
@@ -13,7 +13,7 @@ export let message: string;
           </span>
           <p class="ml-3 font-medium text-white truncate">
             <span class="inline">
-              {message}
+              {successMessage}
             </span>
           </p>
         </div>

@@ -6,7 +6,7 @@
         GA
       </div>
       <div class="flex-1 px-4 py-2 truncate">
-        <a href="#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">Graph API</a>
+        <a href="/#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">Graph API</a>
         <p class="text-sm leading-5 text-gray-500">16 Members</p>
       </div>
       <div class="flex-shrink-0 pr-2">
@@ -22,7 +22,7 @@
         CD
       </div>
       <div class="flex-1 px-4 py-2 truncate">
-        <a href="#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">Component Design</a>
+        <a href="/#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">Component Design</a>
         <p class="text-sm leading-5 text-gray-500">12 Members</p>
       </div>
       <div class="flex-shrink-0 pr-2">
@@ -38,7 +38,7 @@
         T
       </div>
       <div class="flex-1 px-4 py-2 truncate">
-        <a href="#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">Templates</a>
+        <a href="/#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">Templates</a>
         <p class="text-sm leading-5 text-gray-500">16 Members</p>
       </div>
       <div class="flex-shrink-0 pr-2">
@@ -54,7 +54,7 @@
         RC
       </div>
       <div class="flex-1 px-4 py-2 truncate">
-        <a href="#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">React Components</a>
+        <a href="/#" class="text-gray-900 text-sm leading-5 font-medium hover:text-gray-600 transition ease-in-out duration-150">React Components</a>
         <p class="text-sm leading-5 text-gray-500">8 Members</p>
       </div>
       <div class="flex-shrink-0 pr-2">

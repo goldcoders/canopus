@@ -1,3 +1,28 @@
 {
-  "recommendations": ["svelte.svelte-vscode"]
+    "recommendations": [
+        "svelte.svelte-vscode",
+        "proverbialninja.svelte-extractor",
+        "bradlc.vscode-tailwindcss",
+        "naumovs.color-highlight",
+        "albert.TabOut",
+        "patbenatar.advanced-new-file",
+        "formulahendry.auto-rename-tag",
+        "formulahendry.auto-close-tag",
+        "aaron-bond.better-comments",
+        "alefragnani.Bookmarks",
+        "CoenraadS.bracket-pair-colorizer",
+        "sashaweiss.bracket-jumper",
+        "sleistner.vscode-fileutils",
+        "christian-kohler.path-intellisense",
+        "ionutvmi.path-autocomplete",
+        "wmaurer.vscode-jumpy",
+        "hedinne.popping-and-locking-vscode",
+        "rebornix.project-snippets",
+        "jasonnutter.search-node-modules",
+        "vscode-icons-team.vscode-icons",
+        "rust-lang.rust",
+        "stylelint.vscode-stylelint",
+        "be5invis.toml",
+        "christian-kohler.npm-intellisense"
+    ]
 }

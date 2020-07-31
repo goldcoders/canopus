@@ -37,6 +37,11 @@ Bundle Application with tauri
 yarn tauri build
 ```
 
+## Changelog
+- Added Recommeded VScode Settings and Plugins
+- Added Stylelint
+- Added Example callTauriTestCMD
+
 ## WIP Todo for v1.0.0
 - CMS
   - Markdown Editor

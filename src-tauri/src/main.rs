@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize)]
-struct DoSomethingPayload {
+struct ExamplePayload {
   state: String,
   data: u64,
 }
@@ -11,9 +11,9 @@ struct DoSomethingPayload {
 #[derive(Deserialize)]
 #[serde(tag = "cmd", rename_all = "camelCase")]
 enum Cmd {
-  DoSomething {
+  TauriTest {
     count: u64,
-    payload: DoSomethingPayload,
+    payload: ExamplePayload,
     callback: String,
     error: String,
   },
@@ -56,17 +56,22 @@ fn main() {
         Err(e) => Err(e.to_string()),
         Ok(command) => {
           match command {
-            DoSomething { count, payload, callback, error } => tauri::execute_promise(
+            TauriTest {
+              count,
+              payload,
+              callback,
+              error,
+            } => tauri::execute_promise(
               _webview,
               move || {
                 if count > 5 {
                   let response = Response {
                     value: 5,
-                    message: "You Are Good To Go!",
+                    message: "Success! You Have Properly Set Up Tauri on Your Backend!",
                   };
                   Ok(response)
                 } else {
-                  Err(CommandError::new("you only have 5 credits left").into())
+                  Err(CommandError::new("You Have Entered Value Less Than 6").into())
                 }
               },
               callback,
