@@ -41,6 +41,7 @@ yarn tauri build
 - Added Recommeded VScode Settings and Plugins
 - Added Stylelint
 - Added Example callTauriTestCMD
+- Tag v0.1
 
 ## WIP Todo for v1.0.0
 - CMS
