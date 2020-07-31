@@ -1,6 +1,6 @@
 [package]
 name = "canopus"
-version = "0.1.0"
+version = "0.1.2"
 description = "Canopus - Desktop Site Manager For Hugo Sites"
 authors = [ "goldcoders" ]
 license = "MIT"
