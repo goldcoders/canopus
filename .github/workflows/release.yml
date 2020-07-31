@@ -37,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: app-v${{ env.PACKAGE_VERSION }} # the action automatically replaces \_\_VERSION\_\_ with the app version
+          tagName: app-v${{ env.PACKAGE_VERSION }}
           releaseName: "Canopus v${{ env.PACKAGE_VERSION }}"
           body: "See the assets to download this version and install."
           draft: true
