@@ -1,11 +1,38 @@
-name: "build-add-on-tag"
+name: "publish-on-push-tag"
 on:
   push:
     tags:
       - "v*.*.*"
 
 jobs:
-  publish-tauri:
+  create-release:
+    runs-on: ubuntu-latest
+    outputs:
+      RELEASE_UPLOAD_ID: ${{ steps.create_release.outputs.upload_id }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Set Release Version
+        run: echo ::set-env name=RELEASE_VERSION::${GITHUB_REF#refs/*/}
+      - name: get version
+        run: echo ::set-env name=RELEASE_VERSION::$(node -p "require('./package.json').version")
+      - name: create release
+        id: create_release
+        uses: actions/create-release@v1.1.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.RELEASE_VERSION }}
+          release_name: "Canopus ${{ env.RELEASE_VERSION }}"
+          body: "See the assets to download this version and install."
+          draft: true
+          prerelease: false
+  build-tauri:
+    needs: create-release
     strategy:
       fail-fast: false
       matrix:
@@ -13,8 +40,6 @@ jobs:
 
     runs-on: ${{ matrix.platform }}
     steps:
-      - name: Set env
-        run: echo ::set-env name=RELEASE_VERSION::${GITHUB_REF#refs/*/}
       - uses: actions/checkout@v2
       - name: setup node
         uses: actions/setup-node@v1
@@ -37,8 +62,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: ${{ env.RELEASE_VERSION }}
-          releaseName: "Canopus ${{ env.RELEASE_VERSION }}"
-          body: "See the assets to download this version and install."
-          draft: true
-          prerelease: false
+          releaseId: ${{ needs.create-release.outputs.RELEASE_UPLOAD_ID }}
