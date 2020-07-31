@@ -18,8 +18,6 @@ jobs:
           node-version: 12
       - name: Set Release Version
         run: echo ::set-env name=RELEASE_VERSION::${GITHUB_REF#refs/*/}
-      - name: get version
-        run: echo ::set-env name=RELEASE_VERSION::$(node -p "require('./package.json').version")
       - name: create release
         id: create_release
         uses: actions/create-release@v1.1.0
