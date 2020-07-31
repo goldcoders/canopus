@@ -1,5 +1,6 @@
-<script>
-export let name;
+<script lang="ts">
+export let name: string;
+
 import Sitecard from "./sitecard.svelte";
 import Pagetitle from "./pagetitle.svelte";
 import Navbar from "./navbar.svelte";
