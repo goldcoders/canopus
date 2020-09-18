@@ -23,6 +23,14 @@
         "rust-lang.rust",
         "stylelint.vscode-stylelint",
         "be5invis.toml",
-        "christian-kohler.npm-intellisense"
+        "christian-kohler.npm-intellisense",
+        "panicbit.cargo",
+        "bungcip.better-toml",
+        "mikestead.dotenv",
+        "eg2.vscode-npm-script",
+        "esbenp.prettier-vscode",
+        "belfz.search-crates-io",
+        "vscode-snippet.snippet",
+        "bodil.prettier-toml"
     ]
 }
