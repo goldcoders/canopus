@@ -1,6 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize)]
+#[allow(dead_code)]
 struct ExamplePayload {
   state: String,
   data: u64,
@@ -56,6 +57,7 @@ fn main() {
         Err(e) => Err(e.to_string()),
         Ok(command) => {
           match command {
+            
             TauriTest {
               count,
               payload,
