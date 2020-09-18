@@ -92,5 +92,7 @@
     "workbench.tips.enabled": false,
     "breadcrumbs.filePath": "last",
     "css.validate": false,
+    "stylelint.enable": true,
+    "scss.validate": false,
     "tailwindCSS.emmetCompletions": true
 }
