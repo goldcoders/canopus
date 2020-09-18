@@ -5,6 +5,7 @@ module.exports = {
             true,
             {
                 ignoreAtRules: [
+                    "extends",
                     "tailwind",
                     "apply",
                     "variants",
@@ -15,5 +16,7 @@ module.exports = {
         ],
         "declaration-block-trailing-semicolon": null,
         "no-descending-specificity": null,
+        "block-no-empty": null,
+        "unit-whitelist": ["em", "rem", "s"]
     },
 };
